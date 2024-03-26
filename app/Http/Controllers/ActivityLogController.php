@@ -9,7 +9,7 @@ class ActivityLogController extends Controller
 {
     public function index()
     {
-        $activities = Activity::latest()->paginate(10);
+        $activities = Activity::latest();
         
         return view('proseskendaraan.riwayat', compact('activities'));
     }
