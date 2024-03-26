@@ -9,7 +9,7 @@ class ActivityLogController extends Controller
 {
     public function index()
     {
-        $activities = Activity::latest();
+        $activities = Activity::latest()->get();
         
         return view('proseskendaraan.riwayat', compact('activities'));
     }
